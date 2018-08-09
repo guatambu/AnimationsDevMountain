@@ -71,11 +71,11 @@ class ViewController: UIViewController {
                                     })
                                     
                                     UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
-                                        self.sunImageView.transform = CGAffineTransform(scaleX: 2, y: 2)
+                                        self.sunImageView.transform = CGAffineTransform(scaleX: 2, y: 2).concatenating(CGAffineTransform(rotationAngle: CGFloat(Double.pi/4)))
                                     })
                                     
                                     UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4, animations: {
-                                        self.sunImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                        self.sunImageView.transform = .identity
                                     })
                                     
         }) { (_) in

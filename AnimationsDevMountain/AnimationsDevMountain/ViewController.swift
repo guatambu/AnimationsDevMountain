@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        showTheSunButtonOutlet.addTarget(self, action: #selector(animateSun), for: UIControlEvents.touchUpInside)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -54,5 +54,34 @@ class ViewController: UIViewController {
         },
                        completion: nil)
     }
+
+    @objc func animateSun() {
+        let originalPosition = sunImageView.frame
+        UIView.animateKeyframes(withDuration: 10.0,
+                                delay: 0,
+                                options: [],
+                                animations: {
+                                    
+                                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
+                                        self.sunImageView.center = CGPoint(x: 0.5 * self.view.frame.width, y: 0.1 * self.view.frame.height)
+                                    })
+                                    
+                                    UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4, animations: {
+                                        self.sunImageView.center = CGPoint(x: -50, y: self.view.frame.height + 50)
+                                    })
+                                    
+                                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
+                                        self.sunImageView.transform = CGAffineTransform(scaleX: 2, y: 2)
+                                    })
+                                    
+                                    UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4, animations: {
+                                        self.sunImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                    })
+                                    
+        }) { (_) in
+            self.sunImageView.frame = originalPosition
+        }
+    }
+
 }
 

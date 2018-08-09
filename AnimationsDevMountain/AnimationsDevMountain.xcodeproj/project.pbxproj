@@ -60,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6CFE48211BD7FD008F6650 /* AnimationsDevMountain */,
+				FA6CFE69211BD80C008F6650 /* Resources */,
 				FA6CFE5D211BD7FE008F6650 /* AnimationsDevMountainTests */,
 				FA6CFE47211BD7FD008F6650 /* Products */,
 			);
@@ -77,7 +78,6 @@
 		FA6CFE48211BD7FD008F6650 /* AnimationsDevMountain */ = {
 			isa = PBXGroup;
 			children = (
-				FA6CFE69211BD80C008F6650 /* Resources */,
 				FA6CFE4B211BD7FD008F6650 /* ViewController.swift */,
 				FA6CFE6A211BD81C008F6650 /* Views */,
 			);
@@ -371,7 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9FXT6FZ5X;
-				INFOPLIST_FILE = AnimationsDevMountain/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dundak.AnimationsDevMountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9FXT6FZ5X;
-				INFOPLIST_FILE = AnimationsDevMountain/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dundak.AnimationsDevMountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
